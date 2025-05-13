@@ -7,39 +7,57 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header class="container">
-      <img src="images/logo.png" alt="TechNova Logo" style="height: 50px" />
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+    <!-- HEADER -->
+    <header class="site-header">
+      <div class="container nav-container">
+        <!-- use the new title‐logo -->
+        <img
+          src="images/title-logo.png"
+          alt="TechNova Title Logo"
+          class="logo"
+        />
+        <nav class="nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html" class="active">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
-    <div class="container">
-      <section>
-        <h2>Our Services</h2>
-        <div class="gallery-grid">
-          <div>
-            <img src="images/service1.jpg" alt="Web Development" />
-            <h3>Web Development</h3>
-            <p>Responsive websites built with the latest standards.</p>
-          </div>
-          <div>
-            <img src="images/service2.jpg" alt="Mobile Apps" />
-            <h3>Mobile Apps</h3>
-            <p>iOS & Android applications with seamless UX.</p>
-          </div>
-        </div>
-      </section>
-    </div>
+    <!-- SERVICES FEATURE LIST -->
+    <section class="features container">
+      <h2>Our Services</h2>
 
+      <div class="feature-card">
+        <img src="images/website.jpg" alt="Web Development" />
+        <h3>Web Development</h3>
+        <p>Responsive websites built with the latest web standards.</p>
+      </div>
+
+      <div class="feature-card">
+        <img src="images/app.jpg" alt="Mobile Applications" />
+        <h3>Mobile Applications</h3>
+        <p>Custom iOS & Android apps with seamless UX and offline support.</p>
+      </div>
+
+      <div class="feature-card">
+        <img src="images/ecommerce.jpg" alt="E-Commerce Solutions" />
+        <h3>E-Commerce Solutions</h3>
+        <p>Secure online stores with payment gateway integrations.</p>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
     <footer>
-      <p>© 2025 TechNova Solutions. All rights reserved.</p>
+      <div class="container">
+        <p>
+          © 2025 TechNova Solutions | <a href="privacy.html">Privacy Policy</a>
+        </p>
+      </div>
     </footer>
   </body>
 </html>
