@@ -34,8 +34,7 @@ img {
   padding: var(--spacing) 0;
 }
 .logo {
-  width: 150px;
-  height: 50px
+  height: 60px
 }
 .nav ul {
   list-style: none;
@@ -72,6 +71,7 @@ img {
   position: relative;
   color: #fff;
   text-align: center;
+  color: black;
   padding: 0 var(--spacing);
 }
 .hero h1 {
