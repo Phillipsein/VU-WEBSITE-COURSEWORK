@@ -1,37 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>TechNova Solutions | Contact Us</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <header class="container">
-    <img src="images/logo.png" alt="TechNova Logo" style="height:50px;">
-    <nav><ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul></nav>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TechNova Solutions | Contact Us</title>
+    <style>
+      /* ===== VARIABLES & RESET ===== */
+      :root {
+        --primary: #0077cc;
+        --primary-hover: #005fa3;
+        --dark: #333;
+        --light-gray: #f4f4f4;
+        --spacing: 1.5rem;
+        --radius: 6px;
+        --max-width: 1000px;
+      }
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-  <div class="container">
-    <section>
+      /* ===== BASE ===== */
+      body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        color: var(--dark);
+        line-height: 1.6;
+        background: #fff;
+      }
+      a {
+        text-decoration: none;
+        transition: color 0.3s, background 0.3s;
+      }
+      .container {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: 0 var(--spacing);
+      }
+
+      /* ===== HEADER & NAV ===== */
+      .site-header {
+        background: var(--light-gray);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: var(--spacing) 0;
+      }
+      .nav-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--spacing);
+      }
+      .logo {
+        height: 80px;
+      }
+      .nav ul {
+        list-style: none;
+        display: flex;
+        gap: var(--spacing);
+      }
+      .nav a {
+        display: block;
+        padding: 0.5rem 1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: var(--dark);
+        border-radius: var(--radius);
+      }
+      .nav a:hover,
+      .nav a.active {
+        background: var(--primary);
+        color: #fff;
+      }
+
+      /* ===== CONTACT SECTION ===== */
+      .contact {
+        padding: calc(var(--spacing) * 2) 0;
+        text-align: center;
+      }
+      .contact h2 {
+        font-size: 2rem;
+        margin-bottom: var(--spacing);
+        color: var(--primary);
+      }
+      .contact p {
+        max-width: 600px;
+        margin: 0 auto var(--spacing);
+        font-size: 1rem;
+        color: var(--dark);
+      }
+      .contact-form {
+        display: grid;
+        gap: var(--spacing);
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      .contact-form input,
+      .contact-form textarea {
+        width: 100%;
+        padding: 0.75rem 1rem;
+        border: 1px solid #ccc;
+        border-radius: var(--radius);
+        font-size: 1rem;
+        resize: vertical;
+      }
+      .contact-form textarea {
+        min-height: 150px;
+      }
+      .contact-form button {
+        padding: 0.75rem 1.5rem;
+        background: var(--primary);
+        color: #fff;
+        border: none;
+        border-radius: var(--radius);
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+      .contact-form button:hover {
+        background: var(--primary-hover);
+      }
+
+      /* ===== FOOTER ===== */
+      footer {
+        background: var(--dark);
+        color: #ccc;
+        text-align: center;
+        padding: var(--spacing) 0;
+        font-size: 0.9rem;
+      }
+      footer a {
+        color: var(--primary);
+        text-decoration: underline;
+      }
+
+      /* ===== RESPONSIVE ===== */
+      @media (max-width: 768px) {
+        .logo {
+          height: 60px;
+        }
+        .contact h2 {
+          font-size: 1.75rem;
+        }
+        .contact p {
+          font-size: 0.95rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="site-header">
+      <div class="container nav-container">
+        <img src="images/title-logo.png" alt="TechNova Logo" class="logo" />
+        <nav class="nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- CONTACT -->
+    <section class="contact container">
       <h2>Get in Touch</h2>
-      <form action="#" method="post">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <p>
+        Have a question or want to start a project? Fill out the form below and
+        we'll get back to you within 24 hours.
+      </p>
+      <form class="contact-form" action="#" method="post">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
         <button type="submit">Send Message</button>
       </form>
     </section>
-  </div>
 
-  <footer>
-    <p>© 2025 TechNova Solutions. All rights reserved.</p>
-  </footer>
-</body>
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <p>
+          © 2025 TechNova Solutions | <a href="privacy.html">Privacy Policy</a>
+        </p>
+      </div>
+    </footer>
+  </body>
 </html>
