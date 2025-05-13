@@ -1,4 +1,4 @@
-Project Directory structure
+Project Directory structure 
 
 /
 ├─ index.html
