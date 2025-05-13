@@ -47,22 +47,12 @@
       }
 
       /* ===== HEADER & NAV ===== */
-      /* Header floats above the hero */
       .site-header {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
         background: transparent;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         padding: var(--spacing) 0;
-        z-index: 10;
       }
-
-      /* Logo and nav spaced nicely */
       .nav-container {
-        max-width: 100%;
-        margin: 0 auto;
-        padding: 0 var(--spacing);
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -175,6 +165,39 @@
         }
         .about p {
           font-size: 0.95rem;
+        }
+        .nav ul {
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 1rem;
+        }
+
+        /* show the toggle */
+        .nav-toggle {
+          display: flex;
+        }
+
+        /* hide the menu by default */
+        .nav ul {
+          display: none;
+          flex-direction: column;
+          width: 100%;
+          background: white;
+          position: absolute;
+          top: 100%; /* just below header */
+          left: 0;
+          padding: 1rem 0;
+        }
+
+        /* full-width links */
+        .nav ul li {
+          text-align: center;
+          margin: 0.5rem 0;
+        }
+
+        /* when the menu is “open” */
+        .nav.open ul {
+          display: flex;
         }
       }
 
