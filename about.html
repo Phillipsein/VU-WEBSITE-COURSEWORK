@@ -47,12 +47,22 @@
       }
 
       /* ===== HEADER & NAV ===== */
+      /* Header floats above the hero */
       .site-header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
         background: transparent;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         padding: var(--spacing) 0;
+        z-index: 10;
       }
+
+      /* Logo and nav spaced nicely */
       .nav-container {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0 var(--spacing);
         display: flex;
         align-items: center;
         justify-content: space-between;
