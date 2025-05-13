@@ -168,32 +168,11 @@
         }
       }
 
-      /* show the toggle */
-      .nav-toggle {
+      .nav-container {
         display: flex;
-      }
-
-      /* hide the menu by default */
-      .nav ul {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background: white;
-        position: absolute;
-        top: 100%; /* just below header */
-        left: 0;
-        padding: 1rem 0;
-      }
-
-      /* full-width links */
-      .nav ul li {
-        text-align: center;
-        margin: 0.5rem 0;
-      }
-
-      /* when the menu is “open” */
-      .nav.open ul {
-        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: var(--spacing);
       }
     </style>
   </head>
@@ -292,13 +271,3 @@
     </footer>
   </body>
 </html>
-
-
-<script>
-  const toggle = document.querySelector(".nav-toggle");
-  const nav = document.querySelector(".nav");
-
-  toggle.addEventListener("click", () => {
-    nav.classList.toggle("open");
-  });
-</script>
