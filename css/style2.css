@@ -25,13 +25,17 @@ img {
 
 /* ===== HERO & HEADER ===== */
 .hero {
-  position: relative;
-  background: url("../images/hero.jpg") center/cover no-repeat;
-  height: 100vh;
   display: flex;
-  justify-content: left; /*centers .hero-content */
-  align-items: center;
   flex-direction: column;
+
+  /* vertical centering */
+  justify-content: center;
+
+  /* horizontal left-align */
+  align-items: flex-start;
+
+  /* optional: add some left padding so it’s not flush to the very edge */
+  padding-left: 2rem;
 }
 
 /* Header floats above the hero */
