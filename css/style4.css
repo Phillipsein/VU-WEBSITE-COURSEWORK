@@ -29,7 +29,7 @@ img {
   background: url("../images/hero.jpg") center/cover no-repeat;
   height: 100vh;
   display: flex;
-  justify-content: center; /*centers .hero-content */
+  justify-content: center; /* centers .hero-content */
   align-items: center;
   flex-direction: column;
 }
@@ -57,7 +57,7 @@ img {
 }
 
 .logo {
-  height: 200px;
+  height: 100px;
 }
 
 /* Nav links */
@@ -67,7 +67,7 @@ img {
   gap: var(--spacing);
 }
 .nav a {
-  color: #000;
+  color: #fff;
   padding: 0.75rem 1rem;
   text-transform: uppercase;
   font-weight: 600;
@@ -76,8 +76,8 @@ img {
 }
 .nav a:hover,
 .nav a.active {
-  background: rgba(2, 56, 130, 0.8);
-  color: white;
+  background: rgba(255, 255, 255, 0.8);
+  color: var(--dark);
 }
 
 /* ===== HERO CONTENT ===== */
