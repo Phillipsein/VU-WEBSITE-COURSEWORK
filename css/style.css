@@ -34,7 +34,7 @@ img {
   padding: var(--spacing) 0;
 }
 .logo {
-  height: 60px
+  height: 60px;
 }
 .nav ul {
   list-style: none;
