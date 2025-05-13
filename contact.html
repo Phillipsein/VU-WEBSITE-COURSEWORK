@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- favicon / browser-tab logo -->
+     <!-- favicon / browser-tab logo -->
     <link
       rel="icon"
       type="image/png"
@@ -56,7 +56,7 @@
       .nav-container {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: flex-start;
         gap: var(--spacing);
       }
       .logo {
@@ -162,12 +162,6 @@
     <header class="site-header">
       <div class="container nav-container">
         <img src="images/logo.png" alt="TechNova Logo" class="logo" />
-        <button class="nav-toggle" aria-label="Open navigation">
-          <!-- three bars -->
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
         <nav class="nav">
           <ul>
             <li><a href="index.html">Home</a></li>
@@ -205,12 +199,3 @@
     </footer>
   </body>
 </html>
-
-<script>
-  const toggle = document.querySelector(".nav-toggle");
-  const nav = document.querySelector(".nav");
-
-  toggle.addEventListener("click", () => {
-    nav.classList.toggle("open");
-  });
-</script>
