@@ -20,17 +20,7 @@
     <section class="hero">
       <header class="site-header">
         <div class="container nav-container">
-          <img src="images/logo.png" alt="Logo" class="logo" />
-
-          <!-- 1. Hidden checkbox toggle -->
-          <input type="checkbox" id="nav-toggle" class="nav-toggle" />
-          <!-- 2. Label acts as hamburger button -->
-          <label for="nav-toggle" class="nav-toggle-label">
-            <span></span>
-            <span></span>
-            <span></span>
-          </label>
-
+          <img src="images/logo.png" alt="TechNova Title Logo" class="logo" />
           <nav class="nav">
             <ul>
               <li><a href="index.html" class="active">Home</a></li>
@@ -275,40 +265,6 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 1rem;
-    }
-  }
-
-  /* MOBILE ONLY */
-  @media (max-width: 768px) {
-    /* show hamburger */
-    .nav-toggle-label {
-      display: flex;
-    }
-
-    /* hide the normal menu until toggled */
-    .nav ul {
-      display: none;
-      position: absolute;
-      top: 100%; /* right below header */
-      left: 0;
-      width: 100%;
-      flex-direction: column;
-      background: rgba(255, 255, 255, 0.95);
-    }
-    .nav ul li {
-      border-top: 1px solid #eee;
-    }
-    .nav ul li:first-child {
-      border-top: none;
-    }
-    .nav a {
-      padding: 1rem;
-      display: block;
-    }
-
-    /* when checkbox is checked, show menu */
-    .nav-toggle:checked + .nav-toggle-label + .nav ul {
-      display: flex;
     }
   }
 </style>
