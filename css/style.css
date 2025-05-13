@@ -29,7 +29,7 @@ img {
   background: url("../images/hero.jpg") center/cover no-repeat;
   height: 100vh;
   display: flex;
-  justify-content: center; /* centers .hero-content */
+  /* justify-content: center; centers .hero-content */
   align-items: center;
   flex-direction: column;
 }
