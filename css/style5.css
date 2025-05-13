@@ -82,8 +82,7 @@ img {
 
 /* ===== HERO CONTENT ===== */
 .hero-content {
-  background-color: #000;
-  text-align: left;
+  text-align: center;
   max-width: 800px;
   padding: 0 var(--spacing);
   color: var(--dark);
