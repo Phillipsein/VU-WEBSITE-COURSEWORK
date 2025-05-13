@@ -22,73 +22,82 @@ img {
   display: block;
 }
 
-/* HEADER (transparent over hero) */
+/* ===== HERO & HEADER ===== */
+
 .site-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: none;
+  position: relative; /* now flows inside the hero */
+  background: transparent; /* no white bar */
   padding: var(--spacing) 0;
-  z-index: 999;
+  z-index: 2; /* above hero background */
 }
+
 .nav-container {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  gap: var(--spacing);
+  justify-content: flex-start; /* keeps logo and nav left-aligned */
+  gap: var(--spacing); /* space between logo and nav */
   max-width: 1000px;
   margin: 0 auto;
   padding: 0 var(--spacing);
 }
+
 .logo {
-  height: 100px;
-  margin: 0; /* no extra margins */
+  height: 100px; /* bump up logo size */
 }
 
-/* NAVIGATION LINKS */
 .nav ul {
   list-style: none;
   display: flex;
   gap: var(--spacing);
+  margin-left: auto; /* push links to the right */
 }
+
 .nav a {
   color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  font-weight: 600;
   padding: 0.75rem 1rem;
+  text-transform: uppercase;
+  font-weight: 600;
   border-radius: var(--radius);
   transition: background 0.3s, color 0.3s;
 }
 .nav a:hover,
 .nav a.active {
-  background: rgba(255,255,255,0.8);
+  background: rgba(255, 255, 255, 0.8);
   color: var(--dark);
 }
 
-/* HERO */
 .hero {
   position: relative;
   background: url("../images/hero.jpg") center/cover no-repeat;
-  height: 80vh;
+  min-height: 100vh; /* cover full viewport */
   display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 0; /* header already absolute */
+  flex-direction: column; /* header + content stack */
+  justify-content: center; /* center hero-content vertically */
 }
+
 .hero-content {
+  position: relative;
   text-align: center;
-  color: var(--dark);
+  color: var(--dark); /* black text */
   padding: 0 var(--spacing);
+  max-width: 800px;
+  margin: auto; /* horizontally center */
 }
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
-}
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: var(--spacing);
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .nav-container {
+    gap: 1rem;
+  }
+  .logo {
+    height: 60px;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
 }
 
 /* BUTTONS */
