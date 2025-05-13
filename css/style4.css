@@ -57,7 +57,7 @@ img {
 }
 
 .logo {
-  height: 100px;
+  height: 200px;
 }
 
 /* Nav links */
@@ -67,7 +67,7 @@ img {
   gap: var(--spacing);
 }
 .nav a {
-  color: #fff;
+  color: #000;
   padding: 0.75rem 1rem;
   text-transform: uppercase;
   font-weight: 600;
@@ -76,13 +76,13 @@ img {
 }
 .nav a:hover,
 .nav a.active {
-  background: rgba(255, 255, 255, 0.8);
-  color: var(--dark);
+  background: rgba(18, 147, 212, 0.8);
+  color: white;
 }
 
 /* ===== HERO CONTENT ===== */
 .hero-content {
-  text-align: center;
+  text-align: left;
   max-width: 800px;
   padding: 0 var(--spacing);
   color: var(--dark);
