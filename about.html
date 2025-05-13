@@ -2,19 +2,148 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TechNova Solutions | About Us</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      /* ===== VARIABLES & RESET ===== */
+      :root {
+        --primary: #0077cc;
+        --primary-hover: #005fa3;
+        --dark: #333;
+        --light-gray: #f4f4f4;
+        --spacing: 1.5rem;
+        --radius: 6px;
+        --max-width: 1000px;
+      }
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        color: var(--dark);
+        line-height: 1.6;
+        background: #fff;
+      }
+      .container {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: 0 var(--spacing);
+      }
+      a {
+        text-decoration: none;
+        transition: background 0.3s, color 0.3s;
+      }
+
+      /* ===== HEADER & NAV ===== */
+      .site-header {
+        background: var(--light-gray);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: var(--spacing) 0;
+      }
+      .nav-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--spacing);
+      }
+      .logo {
+        height: 80px;
+      }
+      .nav ul {
+        list-style: none;
+        display: flex;
+        gap: var(--spacing);
+      }
+      .nav a {
+        display: block;
+        padding: 0.5rem 1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: var(--dark);
+        border-radius: var(--radius);
+      }
+      .nav a:hover,
+      .nav a.active {
+        background: var(--primary);
+        color: #fff;
+      }
+
+      /* ===== ABOUT SECTION ===== */
+      .about {
+        padding: calc(var(--spacing) * 2) 0;
+        text-align: center;
+      }
+      .about h2 {
+        font-size: 2rem;
+        margin-bottom: var(--spacing);
+        color: var(--primary);
+      }
+      .about p {
+        max-width: 800px;
+        margin: 0 auto var(--spacing);
+        font-size: 1rem;
+        line-height: 1.8;
+        color: var(--dark);
+      }
+
+      /* ===== TEAM SECTION ===== */
+      .team {
+        padding-bottom: calc(var(--spacing) * 2);
+        text-align: center;
+      }
+      .team h2 {
+        font-size: 2rem;
+        margin-bottom: var(--spacing);
+        color: var(--primary);
+      }
+      .team-image {
+        width: 100%;
+        max-width: 800px;
+        border-radius: var(--radius);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      }
+
+      /* ===== FOOTER ===== */
+      footer {
+        background: var(--dark);
+        color: #ccc;
+        text-align: center;
+        padding: var(--spacing) 0;
+        font-size: 0.9rem;
+      }
+      footer a {
+        color: var(--primary);
+        text-decoration: underline;
+      }
+
+      /* ===== RESPONSIVE ===== */
+      @media (max-width: 768px) {
+        .nav-container {
+          flex-direction: column;
+          gap: 1rem;
+        }
+        .logo {
+          height: 60px;
+        }
+        .about h2,
+        .team h2 {
+          font-size: 1.75rem;
+        }
+        .about p {
+          font-size: 0.95rem;
+        }
+      }
+    </style>
   </head>
   <body>
-    <!-- HEADER / NAV -->
+    <!-- HEADER -->
     <header class="site-header">
       <div class="container nav-container">
-        <img
-          src="images/title-logo.png"
-          alt="TechNova Title Logo"
-          class="logo"
-        />
+        <img src="images/title-logo.png" alt="TechNova Logo" class="logo" />
         <nav class="nav">
           <ul>
             <li><a href="index.html">Home</a></li>
@@ -27,18 +156,18 @@
       </div>
     </header>
 
-    <!-- ABOUT US -->
+    <!-- ABOUT SECTION -->
     <section class="about container">
       <h2>Our Story</h2>
       <p>
         Founded in 2022 by a team of passionate developers, TechNova has
-        delivered 50+ projects across fintech, healthcare, and e-commerce
-        sectors. We’re dedicated to innovation, quality, and building long-term
-        partnerships with our clients.
+        delivered over 50 projects across fintech, healthcare, and e-commerce
+        sectors. We combine innovation, quality, and collaboration to build
+        solutions that drive real results for our clients.
       </p>
     </section>
 
-    <!-- TEAM -->
+    <!-- TEAM SECTION -->
     <section class="team container">
       <h2>Our Team</h2>
       <img src="images/team.jpg" alt="TechNova Team" class="team-image" />
