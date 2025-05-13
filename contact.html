@@ -3,6 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon / browser-tab logo -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/title-logo.png"
+    />
     <title>TechNova Solutions | Contact Us</title>
     <style>
       /* ===== VARIABLES & RESET ===== */
@@ -42,14 +49,14 @@
 
       /* ===== HEADER & NAV ===== */
       .site-header {
-        background: var(--light-gray);
+        background: transparent;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         padding: var(--spacing) 0;
       }
       .nav-container {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: flex-start;
         gap: var(--spacing);
       }
       .logo {
@@ -154,7 +161,7 @@
     <!-- HEADER -->
     <header class="site-header">
       <div class="container nav-container">
-        <img src="images/title-logo.png" alt="TechNova Logo" class="logo" />
+        <img src="images/logo.png" alt="TechNova Logo" class="logo" />
         <nav class="nav">
           <ul>
             <li><a href="index.html">Home</a></li>
