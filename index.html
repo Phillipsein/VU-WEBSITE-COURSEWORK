@@ -1,0 +1,335 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+    <!-- favicon / browser-tab logo -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/title-logo.png"
+    />
+
+    <title>TechNova Solutions | Home</title>
+  </head>
+  <body>
+    <!-- HERO (with header inside) -->
+    <section class="hero">
+      <header class="site-header">
+        <div class="container nav-container">
+          <img src="images/logo.png" alt="TechNova Title Logo" class="logo" />
+          <button class="nav-toggle" aria-label="Open navigation">
+            <!-- three bars -->
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <nav class="nav">
+            <ul>
+              <li><a href="index.html" class="active">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <div class="hero-content">
+        <h1>Innovate. Build. Scale.</h1>
+        <p>We craft custom web & mobile solutions that grow your business.</p>
+        <a href="services.html" class="btn">Explore Our Services</a>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features container">
+      <div class="feature-card">
+        <img src="images/website.jpg" alt="Web Dev" />
+        <h3>Web Development</h3>
+        <p>Responsive, SEO-friendly sites built on modern frameworks.</p>
+      </div>
+      <div class="feature-card">
+        <img src="images/app.jpg" alt="Mobile Apps" />
+        <h3>Mobile Applications</h3>
+        <p>iOS & Android apps with intuitive UX and offline support.</p>
+      </div>
+      <div class="feature-card">
+        <img src="images/ecommerce.jpg" alt="E-Commerce" />
+        <h3>E-Commerce Solutions</h3>
+        <p>Secure, scalable online stores with payment integrations.</p>
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="cta container">
+      <h2>Ready to Start Your Project?</h2>
+      <p>Get a free consultation and quote in under 24 hours.</p>
+      <a href="contact.html" class="btn outline">Let’s Talk</a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <p>
+          © 2025 TechNova Solutions | <a href="privacy.html">Privacy Policy</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style>
+  /* css/style.css */
+
+  /* ===== VARIABLES & RESET ===== */
+  :root {
+    --primary: #0077cc;
+    --primary-hover: #005fa3;
+    --dark: #333;
+    --spacing: 1.5rem;
+    --radius: 6px;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: var(--dark);
+    line-height: 1.6;
+  }
+  img {
+    max-width: 100%;
+    display: block;
+  }
+
+  /* ===== HERO & HEADER ===== */
+  .hero {
+    position: relative;
+    background: url("../images/hero.jpg") center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center; /* centers .hero-content */
+    align-items: center;
+    flex-direction: column;
+  }
+
+  /* Header floats above the hero */
+  .site-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    padding: var(--spacing) 0;
+    z-index: 10;
+  }
+
+  /* Logo and nav spaced nicely */
+  .nav-container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 var(--spacing);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing);
+  }
+
+  .logo {
+    height: 100px;
+  }
+
+  /* Nav links */
+  .nav ul {
+    list-style: none;
+    display: flex;
+    gap: var(--spacing);
+  }
+  .nav a {
+    color: #000;
+    padding: 0.75rem 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: var(--radius);
+    transition: background 0.3s, color 0.3s;
+  }
+  .nav a:hover,
+  .nav a.active {
+    background: rgba(18, 147, 212, 0.8);
+    color: white;
+  }
+
+  /* ===== HERO CONTENT ===== */
+  .hero-content {
+    text-align: left;
+    width: 100%;
+    padding: 0 var(--spacing);
+    color: var(--dark);
+  }
+  .hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+  }
+  .hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: var(--spacing);
+  }
+  .btn {
+    display: inline-block;
+    background: var(--primary);
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius);
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s;
+  }
+  .btn:hover {
+    background: var(--primary-hover);
+  }
+  .btn.outline {
+    background: transparent;
+    border: 2px solid #fff;
+  }
+  .btn.outline:hover {
+    background: #fff;
+    color: var(--dark);
+  }
+
+  /* ===== FEATURES ===== */
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--spacing);
+    margin: var(--spacing) 0;
+  }
+  .feature-card {
+    background: #fff;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    padding: var(--spacing);
+    transition: transform 0.2s;
+  }
+  .feature-card:hover {
+    transform: translateY(-4px);
+  }
+  .feature-card h3 {
+    margin: var(--spacing) 0 0.5rem;
+    color: var(--primary);
+  }
+
+  /* ===== CTA ===== */
+  .cta {
+    background: var(--primary);
+    color: #fff;
+    text-align: center;
+    padding: calc(var(--spacing) * 2) var(--spacing);
+    border-radius: var(--radius);
+    margin-bottom: var(--spacing);
+  }
+  .cta h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  .cta p {
+    margin-bottom: var(--spacing);
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: var(--dark);
+    color: #ccc;
+    padding: var(--spacing) 0;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  footer a {
+    color: var(--primary);
+    text-decoration: underline;
+  }
+
+  /* hide toggle by default */
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 2rem;
+    height: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: right;
+    padding: 0;
+  }
+
+  .nav-toggle span {
+    display: block;
+    width: 100%;
+    height: 0.2rem;
+    background-color: #333;
+    border-radius: 2px;
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 768px) {
+    .logo {
+      height: 60px;
+    }
+    .hero-content h1 {
+      font-size: 2rem;
+    }
+    .hero-content p {
+      font-size: 1rem;
+    }
+    .nav ul {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    /* show the toggle */
+    .nav-toggle {
+      display: flex;
+    }
+
+    /* hide the menu by default */
+    .nav ul {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background: white;
+      position: absolute;
+      top: 100%; /* just below header */
+      left: 0;
+      padding: 1rem 0;
+    }
+
+    /* full-width links */
+    .nav ul li {
+      text-align: center;
+      margin: 0.5rem 0;
+    }
+
+    /* when the menu is “open” */
+    .nav.open ul {
+      display: flex;
+    }
+  }
+</style>
+
+<script>
+  const toggle = document.querySelector(".nav-toggle");
+  const nav = document.querySelector(".nav");
+
+  toggle.addEventListener("click", () => {
+    nav.classList.toggle("open");
+  });
+</script>
